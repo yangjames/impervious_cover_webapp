@@ -67,12 +67,17 @@ impervious_cover_webapp -- [TOP]
             * mapapp2.js
             * register.js
             * submitlogin.js
-      * secure
-         * index.html
+            * jquery-ui-1.10.3.custom
+              * [accordion menu javascript plugin]
+      * secure -- **[to be deleted]**
    * icons -- **[to be deleted]**
    * manual -- **[to be deleted]**
 * map_tiles
    * [subdirectories with png images]
+
+# Getting Started
+-----------------
+All front end app content are 
 
 # Author
 --------
