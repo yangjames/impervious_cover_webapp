@@ -4,13 +4,13 @@ The following explains the contents of this repository. There's a lot of extrane
 
 # Directory Tree
 ================
--impervious_cover_webapp
+impervious_cover_webapp
 
 |__www
 
 |__map_tiles
 
----|__
+   |__
 
 # Author
 ========
