@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <script type="text/javascript" src="../src/jquery-2.0.2.js"></script>
+    <script type="text/javascript" src="../src/jquery-ui-1.10.3.custom/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=drawing"></script>
+    <script type="text/javascript" src="../src/apiKeys.js"></script>
+    <script type="text/javascript" src="../src/ContextMenu.js"></script>
+    <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.5/src/markerwithlabel_packed.js"></script>
+
+    <script type="text/javascript" src="../src/mapapp2.js"></script>
+
+    <link href="../css/mapapp.css" rel="stylesheet">
+    <link href="../src/jquery-ui-1.10.3.custom/jquery-ui-1.10.3.custom/css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="control-panel">
+      <div id="accordion">
+	<h3>Account</h3>
+	<div>
+	  <span id="notification"></span><br>
+	  <input id="logout" type="button" value="Logout" style="display:none"/>
+	  <input id="login" type="button" value="Login"/><br><br>
+	  <a href="manage_account.html">Manage Account</a><br>
+	  <a href="app.html">Back to Main Portal</a><br>	  
+	</div>
+	<h3>Go to Region</h3>
+	<div>
+	  Enter a location or address:
+	  <input id="geocoder-text" type="text"/>
+	  <input id="geocoder-button" type="button" value="Go"/><br>
+	</div>
+	<h3>Layers</h3>
+	<div style="overflow-x: auto; overflow-y: auto">
+	  Select a layers to overlay on the map:<br>
+	  <input id="huc-zones" type="checkbox">HUC Zones</input><br>
+	  <fieldset id="huc-zone-state" style="display:none">
+	    State to view:<br>
+	    <select id="state-select" style="width:178px">
+	      <option value="null" selected="selected">Select State</option>
+	    </select>
+	  </fieldset>
+	  <input id="impervious-cover" type="checkbox">Impervious Cover</input><br>
+	  <fieldset id="ic-date" style="display:none">
+	    <select id="ic-select" style="width:178px">
+	      <option value="null" selected="selected">Select Option</option>
+	      <option value="specific-date">Specific Date</option>
+	      <option value="diff-date">Between Dates</option>
+	    </select>
+	    <span id="specific-date" style="display:none">
+	      Specific Date: <input id="date-picker" type="date"><input id="date-submit" type="button" value="Display">
+	    </span>
+	    <span id="diff-date" style="display:none">
+	      Difference between two dates:<br>
+	      <input id="diff-date-1" type="date">
+	      <input id="diff-date-2" type="date"><input id="diff-date-submit" type="button" value="Display">
+	    </span>
+	  </fieldset>
+	  <input id="my-subscriptions" type="checkbox">Saved Regions</input><br>
+	  <fieldset id="subscription-management" style="display:none; overflow-x: auto; overflow-y: auto">
+	    <input id="manage-subscriptions" type="button" value="Manage Regions"/><br>
+	    <select size="10" id="subscriptions-list" style="display:none; width:183px; overflow-x: auto; overflow-y: auto" multiple></select>
+	    <input id="subscription-edit" type="button" value="Edit" style="display:none; width: 80px"/>
+	    <input id="subscription-save" type="button" value="Save" style="display:none; width: 80px"/>
+	    <input id="subscription-delete" type="button" value="Delete" style="display:none; width: 80px"/>
+	    <input id="subscription-management-close" type="button" value="Close" style="display:none; width: 80px"/>
+	  </fieldset>
+	</div>
+      </div>
+      <p><a href="#" id="help" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-newwin"></span>Help</a><p>
+      <div id="dialog" title="Help">
+	<p>Welcome to the Impervious Cover Decision Making Tool!</p>
+	<p>
+	  This app was designed to be a tool for analyzing watersheds and impervious coverage using remote sensing data. With this app, you can:
+	  <ul>
+	    <li>View impervious cover overlayed on a satellite map</li><br>
+	    <li>Analyze data specific to particular Hydrological Unit Code (HUC) zones</li><br>
+	    <li>See how impervious coverage has changed in a region during a period of time</li><br>
+	    <li>Subscribe to alerts notifying you of changes in impervious cover for your choice of HUC zones</li>
+	  </ul>
+	</p>
+	<p style="text-align:right"><a href="#" id="next-help-page">Next Page</a></p>
+      </div>
+      <div id="region-edit" title="Region Editor">
+	<input id="new-data-subscribe-checkbox" type="checkbox"/>Notify me if new data for this region are availabe<br>
+	<input id="edit-subscription-save" type="button" value="Save" style="width: 90px"/>
+      </div>
+      <div id="region-edit2" title="Region Editor">
+	<input id="data-subscribe-checkbox" type="checkbox"/>Notify me if new data for this region are availabe<br>
+	<input id="edit-save" type="button" value="Save" style="width: 90px"/>
+      </div>
+
+      <div class="infobox-wrapper">
+	<div id="infobox">
+          The contents of your info box. It's very easy to create and customize.
+	</div>
+      </div>
+      <span id="testline2"></span>
+      <span id="testline3"></span>
+    </div>
+    <div id="map-canvas"></div>
+  </body>
+</html>
