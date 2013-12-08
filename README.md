@@ -75,15 +75,22 @@ impervious_cover_webapp -- [TOP]
 * map_tiles
    * [subdirectories with png images]
 
+Client side content is all in impervious_cover_webapp/www/impervious_cover2. Server side content is all in impervious_cover_webapp/www/cgi-bin.
+
 # Getting Started
 -----------------
-All front end app content are 
+All files discussed in this document refer to files in the path impervious_cover_webapp/www/impervious_cover2.
+
+## Main Portal
+The app starts at html/app.html. This is the main portal for the app. Styling can be found in css/app.css and Javascript can be found in src/app.js.
 
 # Author
 --------
 James Yang, August-December 2013
+
 jayang@seas.upenn.edu
-james.yang92@gmail.com.
+
+james.yang92@gmail.com
 
 # Copyright
 -----------
