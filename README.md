@@ -118,7 +118,7 @@ The main application page is `html/mapapp.html`. This page is styled with `css/m
 5. src/ContextMenu.js
 6. src/mapapp2.js
 
-Script 1 is the same jQuery plugin used in the login and registration pages. Scripts 2 and 5 are purely for styling and enhanced interactivity. The primary scripts that provide actual functionality are 3, 4, and 6.
+Script 1 is the same jQuery plugin used in the login and registration pages. Scripts 2 and 5 are purely for styling and enhanced interactivity. The primary scripts that provide actual functionality are 3, 4, and 6. For more details on the styling scripts, visit the site for the [jQuery user interface accordion plugin](http://jqueryui.com/accordion/) and the site for creating [context menus for Google Maps](http://googlemapsmania.blogspot.com/2012/04/create-google-maps-context-menu.html). The source code for the context menu API can be found [here](http://code.martinpearman.co.uk/googlemapsapi/contextmenu/1.0/).
 
 ###### 
 
