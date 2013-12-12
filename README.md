@@ -118,9 +118,15 @@ The main application page is `html/mapapp.html`. This page is styled with `css/m
 5. src/ContextMenu.js
 6. src/mapapp2.js
 
-Script 1 is the same jQuery plugin used in the login and registration pages. Scripts 2 and 5 are purely for styling and enhanced interactivity. The primary scripts that provide actual functionality are 3, 4, and 6. For more details on the styling scripts, visit the site for the [jQuery user interface accordion plugin](http://jqueryui.com/accordion/) and the site for creating [context menus for Google Maps](http://googlemapsmania.blogspot.com/2012/04/create-google-maps-context-menu.html). The source code for the context menu API can be found [here](http://code.martinpearman.co.uk/googlemapsapi/contextmenu/1.0/).
+Script 1 is the same jQuery plugin used in the login and registration pages. Scripts 2 and 5 are purely for styling and enhanced interactivity. The primary scripts that provide actual functionality are 3, 4, and 6. For more details on the styling scripts, visit the site for the [jQuery user interface accordion plugin](http://jqueryui.com/accordion/) and the site for creating [context menus for Google Maps](http://googlemapsmania.blogspot.com/2012/04/create-google-maps-context-menu.html). The source code for the context menu API can be found [here](http://code.martinpearman.co.uk/googlemapsapi/contextmenu/1.0/). Incorporation of the accordion styling plugin is contained at lines 457-465 and 472-502 in `src/mapapp2.js`, and the context menu plugin is implemented at lines 147-315 in `src/mapapp2.js`.
 
-###### 
+###### Document Elements and Their Javascript Bindings
+The application page `html/mapapp.html` consists of two segments: the map canvas and the control panel.
+
+* **Map Canvas**
+  * **Initialization**: The map canvas is loaded with the Google Maps engine in the function `initialize()` at line 30 of `src/mapapp2.js`. This function is loaded immediately after the entire document is loaded at line 5. From here, the map itself is loaded (line 37), the geocoder for map navigation (line 40), the HUC zone overlay (line 43), impervious cover overlay (line 71), info window (line 74), and drawing manager (line 96).
+  * **Event Loops**: The map canvas involves two event loops. First is the click-and-drag interface for navigating through the map. This is already provided by the Google Maps API, so nothing has to be done there. The second event loop is right clicking for the context menu. This is set in line 181.
+* **Control Panel**: The control panel is custom made and laid out
 
 # Author
 --------
