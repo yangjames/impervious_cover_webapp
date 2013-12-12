@@ -109,6 +109,18 @@ All ajax queries in the login page invoke PHP scripts located in `../../../cgi-b
 The account registration page can be found in `html/register.html`. This is a portal through which users can create an account with the web app host server by registering an email address. The page also uses jQuery 2.0.2, and styling can be found in `css/register.css`. The page uses similar scripts to the login page. The page first loads `src/apiKeys.js` for the server domain name variable and then loads `src/register.js`, a script that contains all the ajax queries involved in communicating with the MySQL database.
 
 ### Main Application
+The main application page is `html/mapapp.html`. This page is styled with `css/mapapp.css`, and sources the following Javascript files:
+
+1. src/jquery-2.0.2.js
+2. src/jquery-ui-1.10.3.custom/jquery-ui.1.10.3.custom/js/jquery-ui-1.10.3.custom.js
+3. The [Google Maps engine](http://maps.google.com/maps/api/js?sensor=false&libraries=drawing)
+4. src/apiKeys.js
+5. src/ContextMenu.js
+6. src/mapapp2.js
+
+Script 1 is the same jQuery plugin used in the login and registration pages. Scripts 2 and 5 are purely for styling and enhanced interactivity. The primary scripts that provide actual functionality are 3, 4, and 6.
+
+###### 
 
 # Author
 --------
@@ -123,4 +135,4 @@ james.yang92@gmail.com
 
 # Copyright
 -----------
-All code written here was drawn from public domain. Therefore, all code written here belongs to the public. Code was developed at the NASA Stennis Space Center.
+All files contained in this repository are property of the NASA Stennis Space Center.
