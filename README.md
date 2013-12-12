@@ -106,7 +106,9 @@ Upon loading the domain name variable, `src/submitlogin.js` is loaded. The scrip
 All ajax queries in the login page invoke PHP scripts located in `../../../cgi-bin`. The MySQL database is accessed using the `mysqli` modules built into PHP5.
 
 ### Account Registration page
+The account registration page can be found in `html/register.html`. This is a portal through which users can create an account with the web app host server by registering an email address. The page also uses jQuery 2.0.2, and styling can be found in `css/register.css`. The page uses similar scripts to the login page. The page first loads `src/apiKeys.js` for the server domain name variable and then loads `src/register.js`, a script that contains all the ajax queries involved in communicating with the MySQL database.
 
+### Main Application
 
 # Author
 --------
