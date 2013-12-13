@@ -126,7 +126,10 @@ The application page `html/mapapp.html` consists of two segments: the map canvas
 * **Map Canvas**
   * **Initialization**: The map canvas is loaded with the Google Maps engine in the function `initialize()` at line 30 of `src/mapapp2.js`. This function is loaded immediately after the entire document is loaded at line 5. From here, the map itself is loaded (line 37), the geocoder for map navigation (line 40), the HUC zone overlay (line 43), impervious cover overlay (line 71), info window (line 74), and drawing manager (line 96).
   * **Event Loops**: The map canvas involves two event loops. First is the click-and-drag interface for navigating through the map. This is already provided by the Google Maps API, so nothing has to be done there. The second event loop is right clicking for the context menu. This is set in line 181.
-* **Control Panel**: The control panel is custom made and laid out
+* **Control Panel**: The control panel is custom made and styled using the [accordion jQuery plugin](http://jqueryui.com/accordion/). Each section is separated by a div.
+  * **Account Settings**: This is meant to be a simple container for account management. From here, the user can login and logout of their account. Yet to be implemented is a way of deleting an account. The login and logout buttons are set to event loops in lines 753 and 766.
+  * **Geocoder**: This is a simple container containing a module that allows the user to reposition the map to whatever input location they choose. The geocoder variable is set in line 40, and event loops for the text box and button are in lines 546 and 551.
+  * **Overlays**: This is a 3-part container that allows the user to overlay HUC boundaries, impervious cover maps, and personal regions of interest. The HUC boundary overlay variable is set in line 43, but it is actually set to a value when the user selects a date from the drop down menu, a separate event loop in line 556. The impervious cover overlay event loop is set in lines 572 and 583. The subscriptions list for saved regions of interest are set in lines 599, 610, 667, 673, 707, 716, 735, and 744.
 
 # Author
 --------
