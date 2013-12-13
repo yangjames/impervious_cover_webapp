@@ -9,6 +9,9 @@ impervious_cover_webapp -- [TOP]
 * .gitignore
 * README.md
 * convert.sh
+* doc
+  * NASA Final Paper.pdf -- **high and low level overview of automation process and application**
+  * impervious cover (3).pptx -- **powerpoint presentation on the impervious cover process**
 * www
    * cgi-bin
       * account_delete.php
